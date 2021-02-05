@@ -14,7 +14,7 @@ const CakesShop = (props) => {
 
 const mapStoreToProps = state =>{
     return {
-        numOfCakes: state.numOfCakes
+        numOfCakes: state.cake.numOfCakes
     }
 }
 
