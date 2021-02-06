@@ -6,30 +6,30 @@ import {
 
 import axios from 'axios'
 
-const userFetchRequest = () =>{
+export const userFetchRequest = () =>{
     return {
         type: USER_FETCH_REQUEST
     }
 }
 
-const userFetchSuccess = users =>{
+export const userFetchSuccess = users =>{
     return{
         type: USER_FETCH_SUCCESS,
         payload: users
     }
 }
 
-const userFetchFailure = error =>{
+export const userFetchFailure = error =>{
     return {
         type: USER_FETCH_FAILURE,
         payload: error
     }
 }
 
-const fetchUsers = () => {
+export const fetchUsers = () => {
 
     return (dispatch)=>{
-        dispatch(userFetchRequest)
+        dispatch(userFetchRequest())
         axios.get('https://jsonplaceholder.typicode.com/users')
         .then(res  => { 
             const users = res.data

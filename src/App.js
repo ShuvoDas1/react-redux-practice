@@ -8,18 +8,20 @@ import IceCreamShop from './Components/IceCreamShop';
 import ReduxHooksIceCreamContainer from './Components/ReduxHooksIceCreamContainer';
 import ChocolateShop from './Components/ChocolateShop';
 import ItemContainer from './Components/ItemContainer';
+import UserContainer from './Components/UserContainer';
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <ItemContainer iceCream />
+        <UserContainer />
+        {/* <ItemContainer iceCream />
         <ItemContainer />
         <CakesShop />
         <ReduxHooksCakeContainer />
         <IceCreamShop />
         <ReduxHooksIceCreamContainer />
-        <ChocolateShop />
+        <ChocolateShop /> */}
       </div>
     </Provider>
   );
