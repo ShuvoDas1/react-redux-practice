@@ -25,9 +25,9 @@ export const newUserFailure = error =>{
 export const  addUser = newUserObj =>{
     return (dispatch) =>{
         dispatch(newUserRequest())
-        axios.post('https://jsonplaceholder.typicode.com/posts')
+        axios.post('https://jsonplaceholder.typicode.com/posts',{newUserObj})
         .then(res => {
-            dispatch(newUserSuccess(newUserObj))
+            dispatch(newUserSuccess(res.data))
         })
         .catch(error=>{
             dispatch(newUserFailure(error.message))

@@ -2,7 +2,7 @@ import { NEWUSER_ADD_REQUEST, NEWUSER_ADD_SUCCESS, NEWUSER_ADD_FAILURE } from '.
 
 const initialNewUser = {
     loading: false,
-    user: {},
+    users: [],
     error: ''
 }
 
@@ -15,9 +15,10 @@ const newUserReducer = (state = initialNewUser, action) =>{
                 loading: true
             }
         case NEWUSER_ADD_SUCCESS: 
+            const users = state.users.concat(action.payload)
             return{
                 loading: false,
-                user:  action.payload,
+                users: users,
                 error: ''
             }
         case NEWUSER_ADD_FAILURE:

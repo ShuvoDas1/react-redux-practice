@@ -16,8 +16,11 @@ const NewUser = ({addUser}) => {
     }
     const handleSubmit = e =>{
         e.preventDefault();
-        console.log(addNewUser)
-        addUser(addNewUser);      
+        addUser(addNewUser); 
+        setAddNewUser({
+            email: '',
+            password: ''
+        })     
         
     }
     return (
