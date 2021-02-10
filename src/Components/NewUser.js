@@ -13,6 +13,7 @@ const NewUser = ({addUser}) => {
         const user = {...addNewUser}
         user[e.target.name]= e.target.value;
          setAddNewUser(user)
+         
     }
     const handleSubmit = e =>{
         e.preventDefault();
@@ -20,15 +21,15 @@ const NewUser = ({addUser}) => {
         setAddNewUser({
             email: '',
             password: ''
-        })     
-        
+        })  
+          
     }
     return (
         <div className='container'>
             <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name='email' onBlur={handleInputBlur} placeholder="Enter email" />
+                    <Form.Control type="email"  name='email' onBlur={handleInputBlur} placeholder="Enter email" />
                     <Form.Text className="text-muted">
                         We'll never share your email with anyone else.
                     </Form.Text>
@@ -41,6 +42,10 @@ const NewUser = ({addUser}) => {
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
+                <Button variant="danger" className='ml-3 px-4' type="reset">
+                    Reset
+                </Button>
+                
             </Form>
         </div>
     );

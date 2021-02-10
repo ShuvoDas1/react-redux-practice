@@ -10,12 +10,14 @@ import ChocolateShop from './Components/ChocolateShop';
 import ItemContainer from './Components/ItemContainer';
 import UserContainer from './Components/UserContainer';
 import NewUser from './Components/NewUser';
+import ShowAllUsers from './Components/ShowAllUsers';
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
         <NewUser />
+        <ShowAllUsers />
         {/* <UserContainer /> */}
         {/* <ItemContainer iceCream />
         <ItemContainer />
